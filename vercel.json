@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/",
-      "destination": "A2-FutureTelling/homepage.html"
+      "destination": "/A2-FutureTelling/homepage.html"
     }
   ]
 }
