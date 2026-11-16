@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#36302b">
+    <title>Internet Shack · Media Arts 213</title>
+    
+    <!-- Links for styles and scripts-->
+    <link rel="stylesheet" href="mediart213Style.css">
+    <script src="mediart213Desktop.js" defer></script>
+    <script src="memoriesLaunch.js" defer></script>
+
+    <!-- Links to fonts-->
+
+</head>
+<body>
+    <header class="shop-header">
+        <a href="/A2-FutureTelling/homepage.html">
+            ← Back to the plaza
+        </a>
+        <span>
+            MICHELLE'S PLAZA / INTERNET SHACK 
+        </span>
+    </header>
+
+    <main>
+        <div class="shop-sign">
+            <small>
+                A LITTLE SPACE ON THE WORLD WIDE WEB
+            </small>
+            
+            <h1>
+                Internet Shack
+            </h1>
+
+            <p>
+                Media Arts 213 · Projects, Assignments & Documentations
+            </p>
+            
+        </div>
+
+        <section class="computer" aria-label="Michelle's project computer">
+            <div class="monitor">
+                <div class="screen-rim">
+                    <div class="screen" id="computer-screen">
+                        <div class="workspace" id="workspace" aria-label="Project desktop">
+
+                            <!-- Desktop icons are various assignments done in class  -->
+                            <nav class="desktop-icons" aria-label="Projects and personal applications">
+
+                                <!-- First assignment - week 1's future vision -->
+                                <button class="desktop-icon" type="button" data-app="FutureVision">
+                                    <span class="icon-art project-art" aria-hidden="true">
+                                        01
+                                    </span>
+                                    <span>Future Vision</span>
+                                </button>
+
+                                <!-- message to visitors not editable -->
+                                <button class="desktop-icon" type="button" data-app="notepad">
+                                    <span class="icon-art note-art" aria-hidden="true"></span>
+                                    <span>Notepad</span>
+                                </button>
+
+                                <!--for memories - the p5js practice done in class - mimic opening up a folder of memories -->
+                                <button class="desktop-icon" type="button" data-app="memories">
+                                    <span class="icon-art folder-art" aria-hidden="true"></span>
+                                    <span>Memories</span>
+                                </button>
+
+                                <!-- Two modes: static off or static on. -->
+                                <button class="desktop-icon" type="button" data-app="settings">
+                                    <span class="icon-art settings-art" aria-hidden="true">⚙</span>
+                                    <span>Settings</span>
+                                </button>
+                            </nav>
+
+                            <div class="wallpaper-mark" aria-hidden="true">
+                                <span>m/</span>
+                                <p>michelle online</p>
+                                <small>MEDIA ARTS 213 / PERSONAL DESKTOP</small>
+                            </div>
+
+                            <p class="desktop-tip">
+                                Double-click an icon to open.
+                                <br>Touch: tap. Keyboard: Tab, then Enter or Space.
+                            </p>
+
+                            <!-- JS inserts only the windows visitors choose to open. -->
+                            <div id="windows"></div>
+                        </div>
+
+                        <!-- TASKBAR: only opened apps appear here -->
+                        <footer class="taskbar">
+                            <span class="taskbar-label">m/ desktop</span>
+                            <div class="task-list" id="task-list" aria-label="Open project windows"></div>
+                            <time id="desktop-clock"></time>
+                        </footer>
+
+                        <!-- effects are restricted to the screen. -->
+                        <canvas id="screen-static" aria-hidden="true"></canvas>
+                        <div class="screen-glass" id="screen-glass" aria-hidden="true"></div>
+                    </div>
+                </div>
+
+                <div class="monitor-chin">
+                    <span class="monitor-brand">M / PERSONAL SYSTEMS</span>
+                    <div class="monitor-switches">
+                        <span class="power-light" aria-hidden="true"></span>
+                        <!-- A shortcut to the same setting as the Settings application. -->
+                        <button id="static-toggle" type="button" aria-label="Screen static" aria-pressed="true">STATIC ON</button>
+                    </div>
+                </div>
+            </div>
+
+                <div class="monitor-neck" aria-hidden="true"></div>
+                <div class="monitor-foot" aria-hidden="true"></div>
+                <div class="keyboard" aria-hidden="true"></div>
+        </section>
+
+        <p class="page-hint">
+            Each APP is an assignment from class. Open one and take a look around.
+        </p>
+        <p class="sr-only" id="desktop-status" role="status" aria-live="polite"></p>
+        <noscript>
+            <p class="page-hint">Enable JavaScript for the desktop windows. Direct project links:
+                <a href="week1.html">Future Vision</a> ·
+            </p>
+        </noscript>
+    </main>
+
+    <footer class="shop-footer">A COLLECTION OF THINGS MADE.</footer>
+
+    <!-- App Content  -->
+    <!-- Future vision - assignment 1 - week 1-->
+    <template data-template="FutureVision" data-title="Future Vision" data-status="Media Arts 213 / Future Vision">
+        <div class="project-content">
+            <div class="window-toolbar">
+                <a href="week1.html" target="_blank" rel="noopener">
+                    Open full page ↗
+                </a>
+                <span>Media Arts 213 / Future Vision</span>
+            </div>
+            <iframe class="project-frame" title="Future Vision Assignment" src="week1.html"></iframe>
+        </div>
+    </template>
+
+
+    <!-- NOTEPAD - read only personal message -->
+    <template data-template="notepad" data-title="A note from Michelle — Notepad" data-status="A note left here for you">
+        <div class="notepad-page">
+            <p>Welcome to a collection of websites made during my Media Art 213 class</p>
+            <p>
+                Media Art 213 is a Web-Based Multimedia class taken during the Fall 2026 Semester at Duke Kunshan University.
+            </p>
+            <p>
+                The entire website before you was created during this class. 
+                This section here is focused on other asssignments, in-class exercises, and even documentation during my time in the class.
+            </p>
+            <p>Take your time looking around.</p>
+            <p>— Michelle</p>
+        </div>
+    </template>
+
+    <!-- SETTINGS — controls the same static effect as the monitor button. -->
+    <template data-template="settings" data-title="Settings" data-status="Display / Readability">
+        <div class="app-padding settings-page">
+            <h2>How would you like the screen?</h2>
+            <p>Choose a clear display or keep the nostalgic static.</p>
+            <fieldset>
+                <legend>Screen appearance</legend>
+                <label><input type="radio" name="screen-mode" value="readable"> Readable — static off</label>
+                <label><input type="radio" name="screen-mode" value="atmospheric"> Atmospheric — static on</label>
+            </fieldset>
+            <p class="small-text">With reduced-motion enabled, static stays still instead of animating.</p>
+        </div>
+     </template>
+
+    <!-- MEMORIES-->
+    <template data-template="memories" data-title="Memories" data-status="Media Arts 213 / JavaScript practice">
+        <div class="memories-experience">
+
+            <!-- Left is description -->
+            <div class="memories-description">
+            <p class="memories-kicker">JavaScript Practice</p>
+            <h2>Memories</h2>
+            <p>
+                Memories is the title of the JavaScript exercise I did in class.
+                It is an abstract visual meant to visualize someone's attempt at
+                remembering their memories.
+            </p>
+            <p class="memories-help">
+                A wandering point leaves a colored trail. The static areas interrupt
+                that trail, like fragments of a memory that will not quite stay.
+            </p>
+
+            <!-- Controls are below the description on the left side-->
+            <div class="memories-controls" aria-label="Memories playback">
+                <button type="button" data-memory-action="play">Play Memories</button>
+                <button type="button" data-memory-action="restart" disabled>Restart</button>
+                <button type="button" data-memory-action="stop" disabled>Stop</button>
+            </div>
+            <p class="memories-status" role="status" aria-live="polite">Ready when you are.</p>
+            </div>
+
+            <!-- RIGHT: the iframe loads ONLY after the visitor presses Play.
+                Keep memoriesPlayer.html next to internet.html.
+            -->
+            <div class="memories-output">
+                <div class="memories-placeholder">
+                    <span aria-hidden="true">m/</span>
+                    <p>Press Play to begin.</p>
+                </div>
+                <iframe class="memories-player" title="Memories" data-player-src="memoriesPlayer.html" hidden></iframe>
+            </div>
+
+        </div>
+    </template>
+
+</body>
+</html>

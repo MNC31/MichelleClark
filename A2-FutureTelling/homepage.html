@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Michelle's Plaza · The Mall of Memories</title>
+    
+    <!-- Links to specific sheets-->
+    <link rel="stylesheet" href="homepageStyle.css">
+    <script src="mall.js" defer></script>
+
+    <!-- Links to fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Redaction+20&family=Redaction+35&display=swap" rel="stylesheet">
+    
+    <!--link other things here-->
+
+</head>
+
+<body>
+    <header class="Homepage">
+        <h1 class="homepage-title">
+            Michelle's Plaza
+        </h1>
+
+        <h2 class="homepage-subtitle">
+            The Mall of Memories
+        </h2>
+
+        <small class="homepage-description">
+            A Mall of Memories and Past Stories
+            <br>
+            Created, Seen, Experienced
+            <br>
+            By Michelle
+        </small>
+
+        <!-- Directory button-->
+         <button aria-controls="directory" aria-expanded="false" id="directory-toggle">
+            DIRECTORY +
+         </button>
+
+    </header>
+
+    <!-- Directory navigation-->
+     <nav aria-label = "Mall Directory" class = "directory" hidden="" id="directory">
+        <p class="directory-style">
+            YOU ARE HERE / LEVEL 01
+        </p>
+        <!-- this would be an about me page-->
+        <button data-jump="information" type="button">
+            <span>
+                01
+            </span>
+            Information Booth
+        </button>
+
+        <!-- this would be specific everything we do in Media Arts 213 - web-base multimedia design-->
+        <button data-jump="internet" type="button">
+            <span>
+                02
+            </span>
+            Internet Shack
+        </button>
+        <!-- add more buttons for other shops here
+            I would add more buttons specific to portfolio here,
+            this will be expanded in future aspects of the mediart213 assignments-->
+         
+        <small class="directory-sub">
+            Select a store to walk to its entrance
+        </small>
+
+     </nav>
+
+     <!-- scrollable view, side ways scroll-->
+     <main aria-label="Scrollable mall corridor" class="corridor" id="corridor" tabindex="0">
+        <!-- the following is the mall architecture-->
+        <div class="world">
+            <!-- continous layer behind stores-->
+            <div class="ceiling"></div>
+            <div class="back-wall"></div>
+         <!-- stores-->
+            <div class="store-row">
+            <!-- begin with welcome-->
+             <section class="welcome-bay">
+                <div class="welcome-sign">
+                    <small class="entrance-exit-small">
+                        WELCOME TO
+                    </small>
+                    <h1 class="entrance-exit-h1">
+                        Michelle's
+                        <br/>
+                        <em>Plaza</em>
+                    </h1>
+                    <p class="entrance-exit-p">
+                    The Mall of Memories
+                    </p>
+                    <span>
+                        INFORMATION · INTERNET · DESIGN
+                    </span>
+                </div>
+                <div class="bench"></div>
+                <div class="plant">✦</div>
+             </section>
+             <!--Information booth store-->
+             <section aria-label="Information Booth" class="storefront information-bay" id="information">
+                <div class="fascia">
+                    <h2>Information Booth</h2>
+                </div>
+                <div class="front">
+                    <div class="display">
+                        <div class="window"></div>
+                        <div class="glass"></div>
+                        <div class="poster">
+                            The Whos, The Whats, The Whys
+                        </div>
+                    </div>
+                    <a aria-label="Enter Information Booth" class="entrance" href="stores/Information store/information.html">
+                        <div class="door-glass"></div>
+                        <span class="open-sign">
+                            OPEN
+                        </span>
+                        <span class="handle"></span>
+                        <span class="enter-label">
+                            ENTER Information Booth ↗
+                        </span>
+                    </a>
+                </div>
+                <div class="plinth"></div>
+            </section>
+            <!--Internet Shack -->
+            <section aria-label="Internet Shack" class="storefront internet-bay" id="internet">
+                <div class="fascia">
+                    <h2>Internet Shack</h2>
+                </div>
+                <div class="front">
+                    <div class="display">
+                        <div class="window"></div>
+                        <div class="glass"></div>
+                        <div class="poster">
+                            Latest Media Arts 213 Projects
+                        </div>
+                    </div>
+                    <a aria-label="Enter Internet Shack" class="entrance" href="stores/Internet store/mediart213.html">
+                        <div class="door-glass"></div>
+                        <span class="open-sign">
+                            OPEN
+                        </span>
+                        <span class="handle"></span>
+                        <span class="enter-label">
+                            ENTER Internet Shack ↗
+                        </span>
+                    </a>
+                </div>
+                <div class="plinth"></div>
+            </section>
+            <!-- more stores will be added here-->
+
+            <!--End of corridor-->
+            <section class="end-bay">
+                <div class="exit-sign">
+                    EXIT →
+                </div>
+                <p class="entrance-exit-p">
+                    Thanks for visiting!
+                    <br>
+                    Created by Michelle Clark
+                    <br>
+                    with help from various open-source examples and Perplexity AI
+                </p>
+                <button data-jump="start">
+                    ← BACK TO THE BEGINNING
+                </button>
+            </section>
+            </div>
+         <!-- Floor layers-->
+            <div class="floor"></div>
+            <div class="floor-stripe"></div>
+        </div>
+    </main>
+    
+    <!-- athmosphere -->
+    <div aria-hidden="true" class="vignette"></div>
+
+    <!-- movement instructions-->
+     <footer class="controls">
+        <button aria-label="Walk left" id="previous">
+            ←
+        </button>
+        <div>
+            <span id="location">
+                THE MALL OF MEMORIES
+            </span>
+            <small>
+                SCROLL TO WALK · CLICK A DOOR TO ENTER
+            </small>
+        </div>
+        <button aria-label="Walk right" id="next">
+            → 
+        </button>
+     </footer>
+     <!-- progress update-->
+     <div aria-hidden="true" class="progress">
+        <span id="progress-fill"></span>
+     </div>
+</body>
+</html>

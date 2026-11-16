@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#36302b">
+  <title>Information Booth · Michelle's Plaza</title>
+  
+  <!--Links-->
+  <link rel="stylesheet" href="informationStyle.css">
+  <script src="information.js" defer></script>
+
+  <!-- Font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Swanky+and+Moo+Moo&family=Unkempt:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header class="booth-header">
+        <!--Goes back button-->
+        <a class="back-link" href="/A2-FutureTelling/homepage.html">
+            ← Back to the plaza
+        </a>
+
+        <p class="unit-label">
+            MICHELLE'S PLAZA / INFORMATION BOOTH
+        </p>
+
+        <div class="heading-row">
+            <div>
+                <p class="eyebrow">
+                    A FEW THINGS PINNED UP FOR YOU
+                </p>
+
+                <h1>
+                    The information board.
+                </h1>
+            </div>
+
+            <span class="desk-stamp" aria-hidden="true">
+                PLEASE
+                <br>
+                MAKE YOURSELF
+                <br>
+                AT HOME
+            </span>
+            
+        </div>
+        <div class="board-toolbar">
+            <p id="board-help">
+                Drag any paper to rearrange it. 
+                Keyboard: Tab to a paper, then use arrow keys; hold Shift for larger steps. 
+                On smaller screens, scroll the board from its empty areas.
+            </p>
+
+            <button type="button" id="reset-board">
+                Reset the board ↺
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <div class="board-viewport" tabindex="0" aria-label="Scrollable information board" aria-describedby="board-help">
+            <div class="board-frame">
+                <section class="corkboard" id="corkboard" aria-label="Michelle's information corkboard">
+                    <span class="board-plaque" aria-hidden="true">
+                        COMMUNITY NOTICES · PLEASE LEAVE ON DISPLAY
+                    </span>
+
+                    <!-- EACH PAPER BELOW:
+                        data-x / data-y = starting position in pixels.
+                        --tilt = decorative angle; --paper-width = width.
+                        Change the headings and paragraphs freely.
+                        Keep a unique id and matching aria-labelledby for each paper.
+                    -->
+                    <article class="paper letter-paper" id="about-note" tabindex="0" role="group" aria-roledescription="movable paper" aria-labelledby="about-heading" aria-describedby="board-help" data-x="45" data-y="47" style="--tilt:-3deg; --paper-width:290px; --start-x:45px; --start-y:47px;">
+                        <span class="pin" aria-hidden="true"></span>
+                        <p class="paper-kicker">
+                            GETTING ACQUAINTED
+                        </p>
+                        <h2 id="about-heading">
+                            Who am I?
+                        </h2>
+                        <p>
+                            Hello, I'm Michelle. I'm the creator of this website. 
+                            I'm a digital media creator, focusing more on computer programming and the video game development side.
+                        </p>
+                        <p>
+                            My goal is to create an interactive experience for anyone who takes a look at my projects.
+                        </p>
+                        <p class="signature">
+                            Nice to meet you,
+                            <br>
+                            <em>Michelle</em>
+                        </p>
+                        <span class="paper-footer">
+                            A LITTLE ABOUT THE PERSON BEHIND THE PLAZA
+                        </span>
+                    </article>
+
+                    <article class="paper flyer" id="purpose-note" tabindex="0" role="group" aria-roledescription="movable paper" aria-labelledby="purpose-heading" aria-describedby="board-help" data-x="382" data-y="34" style="--tilt:2deg; --paper-width:290px; --start-x:382px; --start-y:34px;">
+                        <span class="tape" aria-hidden="true"></span>
+                        <p class="paper-kicker">
+                            YOU ARE INVITED TO EXPLORE
+                        </p>
+                        <h2 id="purpose-heading">
+                            A mall
+                            <br>of memories.
+                        </h2>
+                        <p>
+                            The initial stages of this website is part of a class assignment for my Web-Based Multimedia class. 
+                            Eventually, more personal works and projects will be added to create a portfolio for myself. 
+                            Those will be the different stores you see in the mall.
+                        </p>
+                        <p class="flyer-callout">
+                            Different stores.
+                            <br>Different parts of the same story.
+                        </p>
+                        <div class="tear-tabs" aria-hidden="true">
+                            <span>EXPLORE</span>
+                            <span>REMEMBER</span>
+                            <span>WANDER</span>
+                            <span>RETURN</span>
+                        </div>
+                    </article>
+
+                    <article class="paper lined-paper" id="style-note" tabindex="0" role="group" aria-roledescription="movable paper" aria-labelledby="style-heading" aria-describedby="board-help" data-x="738" data-y="65" style="--tilt:-2deg; --paper-width:375px; --start-x:738px; --start-y:65px;">
+                        <span class="pin pin-dark" aria-hidden="true"></span>
+                        <p class="paper-kicker">
+                            NOTES ON THE ATMOSPHERE
+                        </p>
+                        <h2 id="style-heading">
+                            Why this place?
+                        </h2>
+                        <p>
+                            I opted for a nostalgic, retro, American Strip Mall style because I believe a portfolio is a work of my pasts.
+                            The idea of the whole website is to determine how I see the future, and I see my future as a gateway to the past.
+                        </p>
+                        <p>
+                            As you explore, I want you to experience my memories, stories, and projects as a way to honor a past that no longer exists in the future.
+                            That is why the format of the mall is something rather older. Each represents a part of my childhood that I grew up with, despite how modern the projects inside them are.
+                        </p>
+                        <p class="handwritten">
+                            A familiar place,
+                            <br>remembered a little differently.
+                        </p>
+                    </article>
+
+                    <article class="paper sticky sticky-sand" id="interests-note" tabindex="0" role="group" aria-roledescription="movable note" aria-labelledby="interests-heading" aria-describedby="board-help" data-x="49" data-y="600" style="--tilt:4deg; --paper-width:275px; --start-x:49px; --start-y:600px;">
+                        <h2 id="interests-heading">
+                            Currently curious about…
+                        </h2>
+                        <p>
+                            Programming
+                            <br>Game Development
+                            <br>Memories and The Past
+                        </p>
+                    </article>
+
+                    <article class="paper index-card" id="directory-note" tabindex="0" role="group" aria-roledescription="movable card" aria-labelledby="directory-heading" aria-describedby="board-help" data-x="333" data-y="453" style="--tilt:-2deg; --paper-width:290px; --start-x:333px; --start-y:453px;">
+                        <span class="tape" aria-hidden="true"></span>
+                        <p class="paper-kicker">
+                            A SMALL GUIDE TO THE PLAZA
+                        </p>
+                        <h2 id="directory-heading">
+                            Where things live
+                        </h2>
+                        <p>
+                            <strong>Information Booth</strong>
+                            <br>A little about me and this website.
+                        </p>
+                        <p>
+                            <strong>Internet Shack</strong>
+                            <br>Media Arts 213 (a class on Web-Based Multimedia) projects and assignments
+                        </p>
+                        <p class="small-print">
+                            More storefronts may appear as the plaza grows
+                        </p>
+                    </article>
+
+                    <article class="paper sticky sticky-gray" id="reminder-note" tabindex="0" role="group" aria-roledescription="movable note" aria-labelledby="reminder-heading" aria-describedby="board-help" data-x="670" data-y="465" style="--tilt:5deg; --paper-width:260px; --start-x:670px; --start-y:465px;">
+                        <h2 id="reminder-heading">
+                            A little reminder
+                        </h2>
+                        <p>
+                            What may seem like the end, is never the end of your story. Even when you drift apart from familiar things, they will never truly leave you.
+                        </p>
+                        <p class="handwritten">
+                            There is no rush.
+                        </p>
+                    </article>
+
+                    <article class="paper receipt" id="visitor-note" tabindex="0" role="group" aria-roledescription="movable paper" aria-labelledby="visitor-heading" aria-describedby="board-help" data-x="930" data-y="500" style="--tilt:-4deg; --paper-width:170px; --start-x:930px; --start-y:500px;">
+                        <p class="paper-kicker">
+                            VISITOR COPY
+                        </p>
+                        <h2 id="visitor-heading">
+                            Glad you
+                            <br>stopped by
+                        </h2>
+                        <p>
+                            ADMISSION ........ FREE
+                            <br>TIME LIMIT ...... NONE
+                            <br>TAKE YOUR TIME .... YES
+                        </p>
+                        <div class="barcode" aria-hidden="true"></div>
+                        <p class="small-print">
+                            KEEP THIS LITTLE MOMENT
+                        </p>
+                    </article>
+                </section>
+            </div>
+        </div>
+        <p class="board-caption">
+            Nothing on this board opens another page. Pick things up, move them around, stay a while.
+        </p>
+        <p class="sr-only" id="board-status" role="status" aria-live="polite" aria-atomic="true"></p>
+        <noscript>
+            <p class="noscript-message">
+                The board can be read without JavaScript. Enable JavaScript to move its papers.
+            </p>
+        </noscript>
+    </main>
+
+    <footer class="booth-footer">
+        <span>
+            MICHELLE'S PLAZA
+        </span>
+        <span>
+            A PLACE FOR THE THINGS WE KEEP.
+        </span>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Memories — by Michelle
+    </title>
+        <!-- CSS code to style the player-->
+        <style>
+            * { 
+                box-sizing: border-box; 
+            }
+
+            html, body { 
+                margin: 0; 
+                width: 100%; 
+                height: 100%; 
+                overflow: hidden; 
+                background: #000; 
+            }
+
+            body { 
+                display: grid; 
+                place-items: center; 
+            }
+
+            main { 
+                display: grid; 
+                place-items: center; 
+                width: 100%; 
+                height: 100%; 
+            }
+
+            canvas { 
+                display: block; 
+                width: min(100vw, 100vh) !important; 
+                height: min(100vw, 100vh) !important; 
+            }
+
+            #player-message { 
+                position: absolute; 
+                inset: 0; 
+                display: grid; 
+                place-content: center; 
+                margin: 0; 
+                padding: 20px; 
+                color: #ccc4b8; 
+                background: #171919; 
+                text-align: center; 
+                font: 11px/1.7 monospace; 
+            }
+
+            #player-message[hidden] { 
+                display: none; 
+            }
+
+        </style>
+  
+  <!-- Debug: A pinned p5 2.x build with p5.strands support, not the older p5 1.x. -->
+  <script src="https://cdn.jsdelivr.net/npm/p5@2.3.4/lib/p5.js" defer></script>
+  <script src="memoriesSketch.js" defer></script>
+
+</head>
+
+<body>
+    <main id="sketch-host"></main>
+
+    <p id="player-message" role="status">
+        Loading Memories…
+        <!-- error message incase the sketch does not load-->
+        <br>The sketch needs p5.js and WebGL.
+    </p>
+    
+</body>
+</html>
